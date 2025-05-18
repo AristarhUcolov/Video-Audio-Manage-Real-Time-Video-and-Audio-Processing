@@ -103,7 +103,7 @@ If you enjoy this extension, consider supporting future development:
 
 **Aristarh Ucolov**  
 Email: aristarh.ucolov@gmail.com
-GitHub: [@yourusername](https://github.com/AristarhUcolov)
+GitHub: [@AristarhUcolov](https://github.com/AristarhUcolov)
 
 ---
 
