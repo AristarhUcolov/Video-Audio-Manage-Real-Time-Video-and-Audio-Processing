@@ -1,0 +1,205 @@
+body {
+  width: 600px;
+  margin: 0;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+body.light {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  max-width: 100%;
+}
+
+header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+body.light header {
+  border-bottom-color: #ddd;
+}
+
+header h1 {
+  margin: 0;
+  color: #4CAF50;
+}
+
+.settings-section {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+body.light .settings-section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.settings-section h2 {
+  margin-top: 0;
+  color: #4CAF50;
+  font-size: 16px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+}
+
+body.light .settings-section h2 {
+  border-bottom-color: #ddd;
+}
+
+.control-group {
+  margin-bottom: 15px;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.control-group select, 
+.control-group input[type="number"],
+.control-group input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  background-color: #444;
+  color: #e0e0e0;
+  border: 1px solid #555;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+body.light .control-group select,
+body.light .control-group input[type="number"],
+body.light .control-group input[type="text"] {
+  background-color: #fff;
+  color: #333;
+  border-color: #ccc;
+}
+
+.control-group input[type="number"] {
+  width: 60px;
+}
+
+.control-group input[type="text"] {
+  margin-bottom: 5px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  accent-color: #4CAF50;
+}
+
+.control-group button {
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.control-group button:hover {
+  background-color: #45a049;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+}
+
+body.light .footer {
+  border-top-color: #ddd;
+}
+
+.footer button {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+#saveSettings {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#saveSettings:hover {
+  background-color: #45a049;
+}
+
+#cancelChanges {
+  background-color: #444;
+  color: #e0e0e0;
+}
+
+body.light #cancelChanges {
+  background-color: #ddd;
+  color: #333;
+}
+
+#cancelChanges:hover {
+  background-color: #555;
+}
+
+body.light #cancelChanges:hover {
+  background-color: #ccc;
+}
+
+#resetToDefaults {
+  background-color: #f44336;
+  color: white;
+}
+
+#resetToDefaults:hover {
+  background-color: #d32f2f;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+body.light .tooltip .tooltiptext {
+  background-color: #333;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
