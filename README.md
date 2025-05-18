@@ -97,17 +97,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 If you enjoy this extension, consider supporting future development:
 
-[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/aristarh)
-
-**Crypto Donations**:  
-BTC: `1A2b3C4d5E6f7G8h9I0jK1lM2nO3pQ4rS5t`  
-ETH: `0x1a2B3c4D5e6F7g8H9i0Jk1lM2nO3pQ4rS5t6u`
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/aristarh.ucolov)
 
 ## 📧 Contact
 
 **Aristarh Ucolov**  
-Email: your-email@example.com  
-GitHub: [@yourusername](https://github.com/yourusername)
+Email: aristarh.ucolov@gmail.com
+GitHub: [@yourusername](https://github.com/AristarhUcolov)
 
 ---
 
