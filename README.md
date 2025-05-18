@@ -1,6 +1,6 @@
 # 🎚️ Video & Audio Manager - Chrome Extension
 
-![Extension Preview](https://i.imgur.com/JQ8K3hG.png)
+![image](https://github.com/user-attachments/assets/8adb444c-f407-404b-a5db-65e653b2caee)
 
 **Advanced real-time video and audio processing for any website**  
 *Created by Aristarh Ucolov*
