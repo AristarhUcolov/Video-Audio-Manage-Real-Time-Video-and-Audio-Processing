@@ -50,7 +50,7 @@
             const AudioContext = window.AudioContext || window.webkitAudioContext;
             const audioContext = new AudioContext();
             const source = audioContext.createMediaElementSource(element);
-            const processor = audioContext.createScriptProcessor(4096, 2, 2);
+            const processor = audioContext.createScriptProcessor(8192, 2, 2);
 
             element.audioContext = audioContext;
             element.audioSource = source;
