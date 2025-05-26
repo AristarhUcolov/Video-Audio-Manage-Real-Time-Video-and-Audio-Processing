@@ -1,4 +1,7 @@
 # 🎚️ Video & Audio Manager - Chrome Extension
+[![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/efkidfgpglnlabaphedbiglpdaigfkpj?color=blue)](https://chrome.google.com/webstore/detail/video-audio-manager/efkidfgpglnlabaphedbiglpdaigfkpj)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green)](https://github.com/AristarhUcolov/Video-Audio-Manage-Real-Time-Video-and-Audio-Processing/LICENSE)
+![Manifest Version](https://img.shields.io/badge/manifest-v3-important)
 
 ![image](https://github.com/user-attachments/assets/8adb444c-f407-404b-a5db-65e653b2caee)
 
