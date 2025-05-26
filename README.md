@@ -32,7 +32,7 @@
 ## 🚀 Installation
 
 ### Chrome Web Store
-[![Available in Chrome Web Store](https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png)](https://chrome.google.com/webstore/detail/your-extension-id)
+[![Available in Chrome Web Store](https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png)](https://chrome.google.com/webstore/detail/efkidfgpglnlabaphedbiglpdaigfkpj)
 
 ### Manual Installation
 1. Download the latest release
