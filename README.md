@@ -1,7 +1,8 @@
 # 🎚️ Video & Audio Manager - Chrome Extension
 [![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/efkidfgpglnlabaphedbiglpdaigfkpj?color=blue)](https://chrome.google.com/webstore/detail/video-audio-manager/efkidfgpglnlabaphedbiglpdaigfkpj)
-[![GitHub license](https://img.shields.io/badge/license-MIT-green)](https://github.com/AristarhUcolov/Video-Audio-Manage-Real-Time-Video-and-Audio-Processing/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-GPL--3.0-blue)](https://github.com/AristarhUcolov/Video-Audio-Manage-Real-Time-Video-and-Audio-Processing/blob/main/LICENSE)
 ![Manifest Version](https://img.shields.io/badge/manifest-v3-important)
+![Version](https://img.shields.io/badge/version-1.3.1-brightgreen)
 
 ![image](https://github.com/user-attachments/assets/8adb444c-f407-404b-a5db-65e653b2caee)
 
@@ -23,11 +24,13 @@
 
 ### 🛠️ Additional Features
 - Real-time preview while adjusting
-- Preset system (Cinematic, Vintage, Night Mode)
+- Preset system (Cinematic, Vintage, Night Mode, Bass Boost, Voice Clarity)
 - Custom preset creation
 - Import/Export settings
 - Dark/Light theme support
-- Keyboard shortcuts
+- Keyboard shortcuts (Toggle: `Ctrl+Shift+V`, Reset: `Ctrl+Shift+R`)
+- Settings sync across tabs
+- Auto-detection of new media elements
 
 ## 🚀 Installation
 
@@ -35,51 +38,68 @@
 [![Available in Chrome Web Store](https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png)](https://chrome.google.com/webstore/detail/efkidfgpglnlabaphedbiglpdaigfkpj)
 
 ### Manual Installation
-1. Download the latest release
+1. Download or clone this repository
 2. Open Chrome and navigate to:
 ```
 chrome://extensions/
 ```
-3. Enable "Developer mode" (toggle in top-right)
+3. Enable "Developer mode" (toggle in top-right corner)
 4. Click "Load unpacked" and select the extension folder
+
+## 🌐 Browser Compatibility
+
+| Browser | Supported | Notes |
+|---------|-----------|-------|
+| Google Chrome | ✅ Yes | Fully supported (Manifest V3) |
+| Microsoft Edge | ✅ Yes | Chromium-based, fully compatible |
+| Brave | ✅ Yes | Chromium-based, fully compatible |
+| Opera | ✅ Yes | Chromium-based, fully compatible |
+| Firefox | ❌ No | Requires Manifest V2 adaptation |
+| Safari | ❌ No | Different extension architecture |
 
 ## 🧩 How It Works
 
 The extension uses:
-- Web Audio API for real-time audio processing
-- CSS filters for video effects
-- MutationObserver to detect new media elements
-- Chrome Storage API for settings sync
+- **Web Audio API** for real-time audio processing (volume boost, bass, reverb, delay, stereo effects)
+- **CSS filters** for video effects (brightness, contrast, saturation, hue, etc.)
+- **MutationObserver** to automatically detect new media elements on the page
+- **Chrome Storage API** for syncing settings across browser sessions and tabs
 
 ```javascript
-// Example of audio processing
-function processAudio(e, settings) {
-  const input = e.inputBuffer;
-  const output = e.outputBuffer;
-  
-  for (let channel = 0; channel < output.numberOfChannels; channel++) {
-    const inputData = input.getChannelData(channel);
-    const outputData = output.getChannelData(channel);
+// Example: Applying video effects using CSS filters
+function applyVideoEffects(element, videoSettings) {
+    const filters = [];
     
-    // Apply effects here
-    for (let i = 0; i < inputData.length; i++) {
-      outputData[i] = inputData[i] * (settings.volume / 100);
-    }
-  }
+    if (videoSettings.brightness !== 100) filters.push(`brightness(${videoSettings.brightness}%)`);
+    if (videoSettings.contrast !== 100) filters.push(`contrast(${videoSettings.contrast}%)`);
+    if (videoSettings.saturation !== 100) filters.push(`saturate(${videoSettings.saturation}%)`);
+    if (videoSettings.hue !== 0) filters.push(`hue-rotate(${videoSettings.hue}deg)`);
+    if (videoSettings.blur > 0) filters.push(`blur(${videoSettings.blur}px)`);
+    
+    element.style.filter = filters.join(' ');
 }
 ```
 
 ## 📂 Project Structure
 
 ```
-/extension
-  ├── /content         # Content scripts
-  ├── /icons           # Extension icons
-  ├── /options         # Settings page
-  ├── /popup           # Main UI
-  ├── background.js    # Background service worker
-  ├── manifest.json    # Extension config
-  └── README.md        # This file
+├── content/                 # Content scripts injected into web pages
+│   ├── content.js          # Message bridge between extension and page
+│   └── video-audio-processor.js  # Core processing logic
+├── icons/                   # Extension icons
+│   └── icon.png            # Main icon (48x48, 128x128)
+├── options/                 # Extension options/settings page
+│   ├── options.css         # Options page styles
+│   ├── options.html        # Options page structure
+│   └── options.js          # Options page logic
+├── popup/                   # Extension popup UI
+│   ├── popup.css           # Popup styles
+│   ├── popup.html          # Popup structure
+│   └── popup.js            # Popup logic
+├── background.js            # Service worker for background tasks
+├── manifest.json            # Chrome extension configuration
+├── LICENSE                  # GPL-3.0 license
+└── README.md                # This documentation
 ```
 
 ## 🤝 Contributing
@@ -94,7 +114,7 @@ We welcome contributions! Please follow these steps:
 
 ## 📜 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the GNU General Public License v3.0. See [`LICENSE`](LICENSE) for more information.
 
 ## ☕ Support the Developer
 
